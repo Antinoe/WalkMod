@@ -1,0 +1,108 @@
+A simple mod involving precise Movement Control, Sprinting, Crawling and Resting mechanics.
+
+**Walking**
+-Toggle/Hold or hold the "Run" keybind to temporarily turn off Walking.
+-Increase/Decrease speed using the respective keybinds. (Individual Walk Speeds can be configured in the Client Config.)
+
+**Sprinting**
+-Hold keybind to Sprint. (Mechanic can be turned off in the Config.)
+-There is an option to consume Mana when Sprinting.
+
+**Crawling**
+-Toggle keybind to crawl within tight spaces. (Mechanic can be turned off in the Config.)
+
+**Resting**
+-Toggle "Lay Down" keybind to lay down on the ground, which raises your "Rest" stat.
+-Upon reaching a configured point, you will be granted a "Rested" buff. If laying down for longer, you will eventually be granted an additional "Well Rested" buff.
+-These may include buffs for Defense, Endurance and Life Regeneration.
+
+
+-Credits-
+-Scooterboot, Chaos Insurgent 49 and Whiteserpent - Showed me an extremely simple method of toggling booleans on and off.
+-Alceris: Showed me how to modify Player Movement Speeds the correct way.
+
+
+-v0.1-
+-Initial build.
+
+-v0.2-
+-Walking Speed has been increased from 0.925 to 0.935.
+
+-v0.3-
+-Removed unnecessary lines of code that would only prove to be potential conflictions with other mods.
+
+-v0.4-
+-Walking now bestows +2 Life Regeneration.
+-Added a Hold Key for Walking, for those who don't prefer to toggle it.
+
+-v0.5-
+-Updated the mod to tModLoader 1.4.
+-Removed unnecessary content.
+
+-v0.6-
+-Changed the default Keybind of Walking to "LeftShift".
+-Added 3 Keybinds: Cycle Walk Mode, Walk Faster and Walk Slower. Use these to modify your Walk Speed.
+-Cleaned up the code a bit.
+-Updated the Description.
+-Updated the Mod Icon.
+-Moved the contents of the Credits file to the Description, where it should have been.
+
+-v0.6.1-
+-Re-configured the new Walk Speeds to make them more consistent.
+
+-v0.6.2-
+-Tweaked the Walking speeds again.
+
+-v0.6.3-
+-Added more Walk Speeds. There are now 7 different speeds to use.
+-Walk Mode Cycle now only has 2 speeds to cycle from: 6 and 3.
+-Changed the default Keybinds.
+
+-v0.6.4-
+-Changed the default Walk Speed from 5 to 6.
+-Increased the Life Regeneration of Walking from 2 to 3.
+
+-v0.6.5-
+-Reworked the Movement in a more proper form. (Thank you for pointing out how to do this, Alceris.)
+-Added Configuration for Life Regeneration.
+-Renamed mod from "Walking" to "Walking (Movement Control)".
+
+-v0.6.6-
+-Added the "Run" and "Sprint" mechanics.
+-Renamed mod from "Walking (Movement Control)" to "Movement Control (Walk, Run and Sprint)".
+-Adjusted the Walk Cycle values.
+
+-v0.6.6.1-
+-Quick Fix: Players can no longer Sprint while Walking.
+-Reduced the default Sprint Speed from 1.5 to 1.35.
+-Changed some default Keybinds.
+
+-v0.6.7-
+-Added the Fast Walk Keybind. Hold it to temporarily move faster when Walking, much like movement within Interiors in a lot of Rockstar Games titles.
+-Updated the Mod Icon.
+-Increased the Walk Speed threshold. It can now go up to 10, not just 7.
+-Increased the default Sprint Speed from 1.35 to 1.40.
+-Added Mana Consumption for Sprinting. (Off by default.)
+
+-v0.6.7.1-
+-Fixed an oversight with the recent addition of Sprint Mana Consumption.
+
+-v0.6.8-
+-Removed the "Cycle Walk Speed" mechanic.
+-Added Client Config for the Fast Walk keybind.
+-Added sounds for Keybinds. (Can be turned off in the Client Config.)
+
+-v0.6.8.1-
+-Added configuration for individual Walk Speeds.
+
+-v0.6.9-
+-Added the following actions: Laying Down and Crawling. (CROUCHING AND SITTING ARE PLANNED.)
+-Renamed Mod Title from "Movement Control (Walk, Run and Sprint)" to "Movement Control (Walk, Sprint, Crawl and Rest)".
+-Fixed the "Draining Mana when sprinting while standing still" bug.
+-Laying Down raises the "Rest Timer", which grants certain buffs while resting for long enough.
+-Removed the "Walking Life Regen" feature in favor of the new Resting mechanic.
+
+-v0.6.9.1-
+-Hotfix: The Rest Timer no longer drains down past 0 and into the negatives.
+-Adjusted the default Config values accordingly, as they were miscalculated thanks to the bug mentioned above.
+-Made a few adjustments to both the Server Config and Client Config.
