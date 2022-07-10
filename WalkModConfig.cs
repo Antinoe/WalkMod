@@ -13,11 +13,6 @@ namespace WalkMod
 		
 	[Header("General")]
 		
-        [Label("[i:CloudinaBottle] Slow Movement Bug Fix")]
-        [Tooltip("If true, fixes the bug where movement-based effects (such as Hermes Boots) apply even when moving slowly.\n[Default: On]")]
-        [DefaultValue(true)]
-        public bool enableMovementBugFix {get; set;}
-		
         [Label("[i:HermesBoots] Allow Sprinting")]
         [Tooltip("If false, Players cannot Sprint.\n[Default: On]")]
         [DefaultValue(true)]
@@ -57,6 +52,19 @@ namespace WalkMod
         [DefaultValue(true)]
         public bool enableCrawl {get; set;}
 		
+	[Header("[i:Cog] Bug Fixes")]
+		
+        [Label("[i:CloudinaBottle] Slow Movement Bug Fix")]
+        [Tooltip("If true, fixes the bug where movement-based effects (such as Hermes Boots) apply even when moving slowly.\n[Default: On]")]
+        [DefaultValue(true)]
+        public bool enableMovementBugFix {get; set;}
+		
+        [Label("[i:PaintedHorseSaddle] Downward Velocity Bug Fix")]
+        [Tooltip("If true, fixes the bug where Players are launched downwards (even through tiles) when mounted while crawling/laying down.\n[Default: On]")]
+        [DefaultValue(true)]
+		
+        public bool enableDownwardVelocityBugFix {get; set;}
+		
 	[Header("[i:Bed] Resting")]
 		
         [Label("[i:LifeCrystal] Laying Down provides Rest.")]
@@ -75,26 +83,26 @@ namespace WalkMod
 	[Header("Comfort 1")]
 		
         [Label("[i:AlphabetStatue1][i:Campfire] Rest Requirement: Comfort 1")]
-        [Tooltip("How much Rest is required to grant the Comfort 1 buff.\n[Default: 600]\n(REQUIRES WORLD RELOAD)")]
+        [Tooltip("How much Rest is required to grant the Comfort 1 buff.\n[Default: 1200]\n(REQUIRES WORLD RELOAD)")]
         [Slider]
-        [DefaultValue(600)]
-        [Range(100, 3600)]
-        [Increment(100)]
+        [DefaultValue(1200)]
+        [Range(200, 7200)]
+        [Increment(200)]
         public int restComfort1 {get; set;}
 		
         [Label("[i:AlphabetStatue1][i:Stopwatch] Comfort 1 Time")]
-        [Tooltip("How long the Comfort 1 buff lasts.\n[Default: 3600]")]
+        [Tooltip("How long the Comfort 1 buff lasts.\n[Default: 7200]")]
         [Slider]
-        [DefaultValue(3600)]
-        [Range(100, 3600)]
-        [Increment(100)]
+        [DefaultValue(7200)]
+        [Range(200, 7200)]
+        [Increment(200)]
         public int comfort1Time {get; set;}
 		
         [Label("[i:AlphabetStatue1][i:CobaltShield] Comfort 1 Defense")]
-        [Tooltip("How much Defense the Comfort 1 buff grants.\n[Default: 4]")]
+        [Tooltip("How much Defense the Comfort 1 buff grants.\n[Default: 2]")]
         [Slider]
-        [DefaultValue(4)]
-        [Range(0, 40)]
+        [DefaultValue(2)]
+        [Range(0, 20)]
         [Increment(1)]
         public int comfort1Defense {get; set;}
 		
@@ -107,9 +115,9 @@ namespace WalkMod
         public float comfort1Endurance {get; set;}
 		
         [Label("[i:AlphabetStatue1][i:BandofRegeneration] Comfort 1 Regeneration")]
-        [Tooltip("How much Life Regeneration the Comfort 1 buff grants.\n[Default: 5]")]
+        [Tooltip("How much Life Regeneration the Comfort 1 buff grants.\n[Default: 2]")]
         [Slider]
-        [DefaultValue(5)]
+        [DefaultValue(2)]
         [Range(0, 20)]
         [Increment(1)]
         public int comfort1LifeRegen {get; set;}
@@ -117,7 +125,7 @@ namespace WalkMod
         [Label("[i:AlphabetStatue1][i:HermesBoots] Comfort 1 Movement Speed")]
         [Tooltip("How much Movement Speed the Comfort 1 buff grants.\n[Default: 0.05f]")]
         [Slider]
-        [DefaultValue(0.05)]
+        [DefaultValue(0.10)]
         [Range(0f, 1f)]
         [Increment(0.05f)]
         public float comfort1MoveSpeed {get; set;}
@@ -133,7 +141,7 @@ namespace WalkMod
         [Label("[i:AlphabetStatue1][i:TitanGlove] Comfort 1 Attack Damage")]
         [Tooltip("How much Attack Damage the Comfort 1 buff grants.\n[Default: 0.10f]")]
         [Slider]
-        [DefaultValue(0.10)]
+        [DefaultValue(0.05)]
         [Range(0f, 1f)]
         [Increment(0.05f)]
         public float comfort1AttackDamage {get; set;}
@@ -141,26 +149,26 @@ namespace WalkMod
 	[Header("Comfort 2")]
 		
         [Label("[i:AlphabetStatue2][i:Campfire] Rest Requirement: Comfort 2")]
-        [Tooltip("How much Rest is required to grant the Comfort 2 buff.\n[Default: 1200]\n(REQUIRES WORLD RELOAD)")]
+        [Tooltip("How much Rest is required to grant the Comfort 2 buff.\n[Default: 2400]\n(REQUIRES WORLD RELOAD)")]
         [Slider]
-        [DefaultValue(1200)]
-        [Range(100, 3600)]
-        [Increment(100)]
+        [DefaultValue(2400)]
+        [Range(200, 7200)]
+        [Increment(200)]
         public int restComfort2 {get; set;}
 		
         [Label("[i:AlphabetStatue2][i:Stopwatch] Comfort 2 Time")]
-        [Tooltip("How long the Comfort 2 buff lasts.\n[Default: 1800]")]
+        [Tooltip("How long the Comfort 2 buff lasts.\n[Default: 3600]")]
         [Slider]
-        [DefaultValue(1800)]
-        [Range(100, 3600)]
-        [Increment(100)]
+        [DefaultValue(3600)]
+        [Range(200, 7200)]
+        [Increment(200)]
         public int comfort2Time {get; set;}
 		
         [Label("[i:AlphabetStatue2][i:CobaltShield] Comfort 2 Defense")]
-        [Tooltip("How much Defense the Comfort 2 buff grants.\n[Default: 6]")]
+        [Tooltip("How much Defense the Comfort 2 buff grants.\n[Default: 4]")]
         [Slider]
-        [DefaultValue(6)]
-        [Range(0, 40)]
+        [DefaultValue(4)]
+        [Range(0, 20)]
         [Increment(1)]
         public int comfort2Defense {get; set;}
 		
@@ -173,17 +181,17 @@ namespace WalkMod
         public float comfort2Endurance {get; set;}
 		
         [Label("[i:AlphabetStatue2][i:BandofRegeneration] Comfort 2 Regeneration")]
-        [Tooltip("How much Life Regeneration the Comfort 2 buff grants.\n[Default: 5]")]
+        [Tooltip("How much Life Regeneration the Comfort 2 buff grants.\n[Default: 3]")]
         [Slider]
-        [DefaultValue(5)]
+        [DefaultValue(3)]
         [Range(0, 20)]
         [Increment(1)]
         public int comfort2LifeRegen {get; set;}
 		
         [Label("[i:AlphabetStatue2][i:HermesBoots] Comfort 2 Movement Speed")]
-        [Tooltip("How much Movement Speed the Comfort 2 buff grants.\n[Default: 0.05f]")]
+        [Tooltip("How much Movement Speed the Comfort 2 buff grants.\n[Default: 0.15f]")]
         [Slider]
-        [DefaultValue(0.05)]
+        [DefaultValue(0.15)]
         [Range(0f, 1f)]
         [Increment(0.05f)]
         public float comfort2MoveSpeed {get; set;}

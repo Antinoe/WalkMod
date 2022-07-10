@@ -14,6 +14,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Terraria.Audio;
 using WalkMod.Content.Buffs;
+using static Terraria.Mount;
 
 namespace WalkMod
 {
@@ -37,6 +38,10 @@ namespace WalkMod
 		{
 			if (crawl)
 			{
+				if (WalkModConfig.Instance.enableDownwardVelocityBugFix)
+				{
+					Player.mount.Dismount(Player);
+				}
 				Player.accRunSpeed *= 0.35f;
 				Player.maxRunSpeed *= 0.35f;
 			}
@@ -47,6 +52,10 @@ namespace WalkMod
 			}
 			if (lay)
 			{
+				if (WalkModConfig.Instance.enableDownwardVelocityBugFix)
+				{
+					Player.mount.Dismount(Player);
+				}
 				Player.accRunSpeed *= 0f;
 				Player.maxRunSpeed *= 0f;
 			}

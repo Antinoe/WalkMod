@@ -106,3 +106,7 @@ A simple mod involving precise Movement Control, Sprinting, Crawling and Resting
 -Hotfix: The Rest Timer no longer drains down past 0 and into the negatives.
 -Adjusted the default Config values accordingly, as they were miscalculated thanks to the bug mentioned above.
 -Made a few adjustments to both the Server Config and Client Config.
+
+-v0.6.9.2-
+-Fixed the "Downward Velocity while crawling Mounted" bug.
+-Toned down some default config values, as I believe they were a bit too powerful.
