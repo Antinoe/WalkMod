@@ -1,4 +1,4 @@
 displayName = Movement Control (Walk, Sprint, Crawl and Rest)
 author =  Antinous
-version = 0.6.9.2
+version = 0.6.9.3
 homepage = https://github.com/Antinoe/WalkMod

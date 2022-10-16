@@ -23,10 +23,18 @@ namespace WalkMod
         [DefaultValue(true)]
         public bool enablePressSounds {get; set;}
 		
-        [Label("[i:HermesBoots] Fast Walk Speed")]
-        [Tooltip("Additional Walk Speed you gain when holding the Fast Walk keybind.\n[Default: 3]")]
+        [Label("[i:HermesBoots] Default Walk Speed")]
+        [Tooltip("[Default: 3]")]
         [Slider]
         [DefaultValue(3)]
+        [Range(1, 9)]
+        [Increment(1)]
+        public int defaultWalkSpeed {get; set;}
+		
+        [Label("[i:HermesBoots] Fast Walk Speed")]
+        [Tooltip("Additional Walk Speed you gain when holding the Fast Walk keybind.\n[Default: 2]")]
+        [Slider]
+        [DefaultValue(2)]
         [Range(1, 9)]
         [Increment(1)]
         public int walkFastSpeed {get; set;}
@@ -58,17 +66,17 @@ namespace WalkMod
         public float walkSpeed1 {get; set;}
 		
         [Label("20% Walk Speed")]
-        [Tooltip("[Default: 0.2]")]
+        [Tooltip("[Default: 0.25]")]
         [Slider]
-        [DefaultValue(0.2f)]
+        [DefaultValue(0.25f)]
         [Range(0.05f, 0.95f)]
         [Increment(0.05f)]
         public float walkSpeed2 {get; set;}
 		
         [Label("30% Walk Speed")]
-        [Tooltip("[Default: 0.3]")]
+        [Tooltip("[Default: 0.35]")]
         [Slider]
-        [DefaultValue(0.3f)]
+        [DefaultValue(0.35f)]
         [Range(0.05f, 0.95f)]
         [Increment(0.05f)]
         public float walkSpeed3 {get; set;}

@@ -21,7 +21,7 @@ namespace WalkMod
     public class WalkPlayer : ModPlayer
     {
 		public bool walk;
-		public int walkSpeed = 3;
+		public int walkSpeed = WalkModConfigClient.Instance.defaultWalkSpeed;
 		public bool sprint;
 		public int manaSprintInterval;
 		public bool crawl;

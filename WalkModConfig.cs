@@ -68,8 +68,8 @@ namespace WalkMod
 	[Header("[i:Bed] Resting")]
 		
         [Label("[i:LifeCrystal] Laying Down provides Rest.")]
-        [Tooltip("If false, Players cannot build up Rest by Laying Down.\n[Default: On]")]
-        [DefaultValue(true)]
+        [Tooltip("If false, Players cannot build up Rest by Laying Down.\n[Default: Off]")]
+        [DefaultValue(false)]
         public bool enableRestLay {get; set;}
 		
         [Label("[i:Bed] Maximum Rest")]

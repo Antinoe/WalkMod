@@ -110,3 +110,7 @@ A simple mod involving precise Movement Control, Sprinting, Crawling and Resting
 -v0.6.9.2-
 -Fixed the "Downward Velocity while crawling Mounted" bug.
 -Toned down some default config values, as I believe they were a bit too powerful.
+
+-v0.6.9.3-
+-Adjusted the Configuration a bit.
+-Added the "Default Walk Speed" option.
